@@ -23,5 +23,7 @@ if __name__ == '__main__':
     p.start()
     p = mp.Process(target=pb)
     p.start()
+    p = mp.Process(target=pa)
+    p.start()
     print('==================')
     p.join()
