@@ -16,14 +16,17 @@ def f(name):
     print('hello', name)
 
 if __name__ == '__main__':
+    data = 2
     print('==================')
     info('main line')
     p = mp.Process(target=f, args=('bob',))
     
+    p.run()
+    print('==================')
     p.start()
-    p = mp.Process(target=pb)
+    p = mp.Process(target=pb,args=(data,))
     p.start()
-    p = mp.Process(target=pa)
+    p = mp.Process(target=pa,args=(data,))
     p.start()
     print('==================')
     p.join()
